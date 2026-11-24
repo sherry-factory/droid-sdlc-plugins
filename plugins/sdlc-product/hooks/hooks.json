@@ -1,0 +1,15 @@
+{
+  "PreToolUse": [
+    {
+      "matcher": "Execute",
+      "commandRegex": "(^|[;&|(\\s])(git\\s+push|gh\\s+pr\\s+(create|merge)|gh\\s+api\\s.*(pulls|git/refs))",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "echo 'Blocked by sdlc stage policy: this stage cannot push or open PRs. Hand off through the ticket.' >&2; exit 2",
+          "timeout": 10
+        }
+      ]
+    }
+  ]
+}

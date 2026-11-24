@@ -1,0 +1,10 @@
+{
+  "name": "droid-sdlc-plugins",
+  "description": "Dominic SDLC stage skills",
+  "owner": { "name": "Factory SE" },
+  "plugins": [
+    { "name": "sdlc-product", "description": "PRD stage", "source": "./plugins/sdlc-product" },
+    { "name": "sdlc-spec", "description": "Spec stage", "source": "./plugins/sdlc-spec" },
+    { "name": "sdlc-eng", "description": "Implement and validate stages", "source": "./plugins/sdlc-eng" }
+  ]
+}

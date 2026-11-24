@@ -2,7 +2,7 @@
   "PreToolUse": [
     {
       "matcher": "Execute",
-      "commandRegex": "(^|[;&|(\\s])(git\\s+push|gh\\s+pr\\s+(create|merge)|gh\\s+api\\s.*(pulls|git/refs))",
+      "commandRegex": "(?:^|[;&|(`'\"\\s])(?:(?:[^\\s;&|()`'\"]*/)?git(?:\\s+-\\S+(?:\\s+[^\\s-]\\S*)?)*\\s+push(?![\\w-])|(?:[^\\s;&|()`'\"]*/)?gh\\s+(?:pr\\s+(?:create|merge)(?![\\w-])|api(?=[^;&|\\n]*(?:pulls|git/refs))(?=[^;&|\\n]*(?:(?:-X|--method)[=\\s]*(?:POST|PUT|PATCH|DELETE)|\\s(?:-f|-F|--field|--raw-field|--input)[=\\s]))))",
       "hooks": [
         {
           "type": "command",
